@@ -1,0 +1,139 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* Ensure the <ul> takes full height of the screen */
+.ant-menu-root {
+  top: 0; /* Position at the top of the viewport */
+  bottom: 0; /* Extend the <ul> to the bottom of the viewport */
+  left: 0; /* Position at the left of the viewport */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  list-style: none; /* Remove default list styles */
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+@media (max-width: 400px) {
+  .ant-menu-root {
+      max-width: 50px; /* Adjust width for smaller screens */
+  }
+  .ant-menu-item {
+    padding: 16px; /* Adjust padding as needed */
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically within <li> */
+    height: 60px !important;
+  }
+}
+
+  /* Style each <li> item */
+  .ant-menu-item {
+    padding: 5px; /* Adjust padding as needed */
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically within <li> */
+    height: 45px !important;
+
+  }
+  
+  /* Ensure the last <li> is positioned at the bottom of the screen */
+  .ant-menu-item:last-child {
+    margin-top: auto; /* Push the last <li> to the bottom by using auto margin */
+  }
+  .form {
+    overflow-y: scroll; /* Enable vertical scrollbar */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: lightgrey transparent; /* For Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE 10+ */
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+.form::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 5px; /* Height of the scrollbar */
+}
+
+/* WebKit (Chrome, Safari, Edge) - Track */
+.form::-webkit-scrollbar-track {
+    background: transparent; /* Track color (optional) */
+}
+
+/* WebKit (Chrome, Safari, Edge) - Handle */
+.form::-webkit-scrollbar-thumb {
+    background-color: lightgrey; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners of the scrollbar handle */
+    border: 1px solid transparent; /* Border around the scrollbar handle (optional) */
+}
+@keyframes blink-border {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff; /* Change to desired border color */
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Apply custom styles using Tailwind's @apply directive */
+.blinking-border {
+  animation: blink-border 1s linear infinite;
+}
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.custom-tabs-container {
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+  background: #f5f5f5;
+  border-radius: 4px 4px 0 0;
+}
+
+.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+  background: #fff;
+  border-bottom: 2px solid #1890ff;
+}
+
+.ant-tabs-tab {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.ant-tabs-tab:hover {
+  color: #1890ff;
+}
+
+.table-container {
+  overflow-x: auto;
+  padding: 16px 0;
+}
+
+.ant-table {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 8px;
+}

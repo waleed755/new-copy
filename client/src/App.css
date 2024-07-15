@@ -1,0 +1,47 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.ant-modal-content {
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  .filter-container {
+    padding: 16px;
+  }
+  
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .ant-modal-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .ant-modal {
+    top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-container {
+      padding: 8px;
+    }
+  
+    .ant-form-item {
+      margin-bottom: 8px;
+    }
+  }
+
+  .ant-table {
+    table-layout: auto !important;
+    width: 100%; /* Ensure the table takes up its container's width */
+  }
+  
+  .ant-table-cell {
+    white-space: nowrap !important;
+    word-break: break-all !important
+  }
+  
